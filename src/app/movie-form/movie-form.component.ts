@@ -56,6 +56,7 @@ export class MovieFormComponent implements OnInit {
             student => this.successMessage = "Record added successfully",
             error =>  this.errorMessage = <any>error);
             this.movie = {};
+            this.movieForm.form.markAsPristine();
     }
 
   }

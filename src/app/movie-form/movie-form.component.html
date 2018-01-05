@@ -43,7 +43,7 @@
     <div class="form-group">
       <label for="releaseDate" class="col-sm-2 control-label">Release Date</label>
       <div class="col-sm-10">
-        <input [ngModel]="movie?.releaseDate" ngModel #start_date="ngModel" type="text" class="form-control" id="releaseDate" name="releaseDate" placeholder="2017-01-01" pattern="(\d{4})-(\d{2})-(\d{2})">
+        <input [ngModel]="movie?.releaseDate | date:'y-MM-d'" ngModel #start_date="ngModel" type="text" class="form-control" id="releaseDate" name="releaseDate" placeholder="2017-01-01" pattern="(\d{4})-(\d{2})-(\d{2})">
         <span *ngIf="formErrors.releaseDate" class="text-danger">
           {{ formErrors.releaseDate }}
         </span>
